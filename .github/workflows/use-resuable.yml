@@ -76,7 +76,7 @@ jobs:
     runs-on:  ubuntu-latest
     steps:
       - name: Print deploy output result
-        run:  echo "${{ needs.deploy.outputs.result }}"    
+        run:  echo "The output message from resuable workflow is ${{ needs.deploy.outputs.result }}"    
   report:
     needs: [lint,deploy]
     if: failure()
